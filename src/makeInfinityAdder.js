@@ -5,8 +5,7 @@
  * @return {function}
  */
 
-function makeInfinityAdder() {
-  // write code here
-}
+const makeInfinityAdder = (x = 0) => (y) =>
+  typeof y === 'number' ? makeInfinityAdder(x + y) : x;
 
 module.exports = makeInfinityAdder;
